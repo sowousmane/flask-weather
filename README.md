@@ -23,14 +23,14 @@ To test if this project is working well you have install Flask in your local com
 now you can run your flask application by typping this command **in my case**  
 **python3 run.py**  
 
-After you'll see something like this in your terminal that means your app is running sussefuly.  
- Serving Flask app "fbapp.views" (lazy loading)  
+*After you'll see something like this in your terminal that means your app is running sussefuly.  
+ Serving Flask app "fbapp.views" (lazy loading)*  
  *Environment: production*  
-   *WARNING: This is a development server. Do not use it in a production deployment.  
-   *Use a production WSGI server instead.  
- *Debug mode: on  
- *Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)  
- *Restarting with stat  
- *Debugger is active!  
- *Debugger PIN: 134-874-021  
-*127.0.0.1 - - [03/Mar/2021 22:45:59] "GET / HTTP/1.1" 200 -  
+   *WARNING: This is a development server. Do not use it in a production deployment.*  
+   *Use a production WSGI server instead.*  
+ *Debug mode: on*  
+ *Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)*  
+ *Restarting with stat*  
+ *Debugger is active!*  
+ *Debugger PIN: 134-874-021*  
+*127.0.0.1 - - [03/Mar/2021 22:45:59] "GET / HTTP/1.1" 200 -*  
