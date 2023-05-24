@@ -1,0 +1,13 @@
+version: "3"
+services:
+  flask:
+    build: .
+    image: flask:dev-5
+    command: flask --app weather.py --debug run
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app # important for changes that you'll do in your applications so it will be loaded automatically
+volumes:
+  app:
+    
