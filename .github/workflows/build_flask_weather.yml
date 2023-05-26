@@ -21,4 +21,6 @@ jobs:
           echo "Short SHA: $short_sha"
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p  ${{ secrets.DOCKERHUB_PASSWORD }}
           docker build -t kbosow/flask-weather:$short_sha .
-          docker push kbosow/flask-weather:$short_sha 
+          docker push kbosow/flask-weather:$short_sha
+          docker build -t kbosow/flask-weather:latest .
+          docker push kbosow/flask-weather:latest
