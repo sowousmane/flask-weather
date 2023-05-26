@@ -42,11 +42,11 @@ python3 -m venv env
 
 4. Activate the virtual environment
 
-On macOS and Linux:
+- On macOS and Linux:
 ```
 source env/bin/activate
 ```
-On Windows:
+- On Windows:
 ```
 env\Scripts\activate
 ```
@@ -113,5 +113,3 @@ This will stop and remove the containers created by Docker Compose.
 The Weather Flask Application was developed following the tutorial "Creating a Simple Weather App with Python and Flask" by Carlo Scarpitta.
 ### License
 This project is licensed under the MIT License.
-
-
