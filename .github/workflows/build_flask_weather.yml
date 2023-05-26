@@ -1,0 +1,24 @@
+name: CI/CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: List files in the repository
+        run: |
+          docker ps
+          docker images
+          ls -al
+          printenv
+
+# docker push kbosow/docs-soowcode:${GITHUB_SHA}
+# docker build -t kbosow/docs-soowcode:${GITHUB_SHA} .
