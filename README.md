@@ -105,6 +105,17 @@ This command will build the Docker image and start the containers in detached mo
 docker-compose down
 ```
 This will stop and remove the containers created by Docker Compose.
+## Running in Docker
+
+To run the Weather Flask Application in Docker, follow these steps:
+
+1. Make sure you have Docker installed on your machine. You can download and install Docker from the [official Docker website](https://www.docker.com/).
+
+2. Puul and run the image in your computer:
+```
+docker run --rm -e OPEN_WEATHER_TOKEN=your_token -p 5005:5000 kbosow/flask-weather:0.0.1
+```
+
 
 ## List of endpoints
 - /forecast?city=<CITY_NAME>
