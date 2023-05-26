@@ -19,5 +19,6 @@ jobs:
         run: |
           short_sha=$(echo "${{ github.sha }}" | cut -c1-7)
           echo "Short SHA: $short_sha"
-# docker push kbosow/docs-soowcode:${GITHUB_SHA}
-# docker build -t kbosow/docs-soowcode:${GITHUB_SHA} .
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p  ${{ secrets.DOCKERHUB_PASSWORD }}
+          docker build -t kbosow/flask-weather:$short_sha .
+          docker push kbosow/flask-weather:$short_sha 
