@@ -1,3 +1,35 @@
+# Python-specific ignore patterns
+*.pyc
+*.pyo
+__pycache__/
+
+# Environment variables
 .env
-venv/
-__pycache__
+
+# Development and local files
+.dev/
+instance/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Flask-specific files and directories
+instance/
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+
+# Logs and other generated files
+*.log
+*.pid
+*.sock
+*.lock
+*.sqlite
+*.db
+dist/
+build/
+venv
