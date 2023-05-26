@@ -12,12 +12,10 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy .env file
-COPY .env .
-
 # Copy the rest of your project files
 COPY . .
 
+EXPOSE 5000
 
 # Run your application
-#CMD ["flask", "--app","weather.py","run"]
+CMD ["flask", "--app","weather.py","run"]
