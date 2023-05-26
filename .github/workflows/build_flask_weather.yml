@@ -14,6 +14,10 @@ jobs:
           docker images
           ls -al
           printenv
-
+      - name: Set short git commit SHA
+        id: vars
+        run: |
+          short_sha=$(echo "${{ github.sha }}" | cut -c1-7)
+          echo "Short SHA: $short_sha"
 # docker push kbosow/docs-soowcode:${GITHUB_SHA}
 # docker build -t kbosow/docs-soowcode:${GITHUB_SHA} .
