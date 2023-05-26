@@ -3,6 +3,7 @@ services:
   flask:
     build: .
     image: flask-weather
+    command: --debug
     ports:
       - 5000:5000
     volumes:
