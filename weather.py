@@ -9,8 +9,10 @@ app = Flask(__name__)
 
 def get_weather(city_name=None):   
     data = {}
+    # get city from url
     if city_name:
         data['q'] = request.args.get('city')
+    # get city from form
     else:
         data['q'] = request.form['city'] 
 
@@ -27,7 +29,7 @@ def get_weather(city_name=None):
     return data
 
 @app.route("/search-city", methods=["POST"])
-def validate_user():
+def validate_search():
     if request.method == "POST":
         print(request.form['city'])
     data=get_weather()
@@ -39,11 +41,11 @@ def home():
 
     if request.method == 'POST':
         # Handle form submission
-        result = validate_user()  # Replace with your actual function
+        result = validate_search()  # Replace with your actual function
 
     return render_template('home.html', title="home",result=result)
 
-
+# Get weather using params in url
 @app.route('/forecast', methods=['GET'])
 def get_wea():    
     data=get_weather(request.args.get('city'))
