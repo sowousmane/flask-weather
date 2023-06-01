@@ -1,6 +1,6 @@
 # Weather Flask Application
 
-This Weather Flask Application is a simple web application that provides weather information for a specified location. It is built using Python and Flask framework.
+This WeaFlask Application is a simple web application that provides weather information for a specified location. It is built using Python and Flask framework.
 
 The Weather Flask Application was created following the tutorial https://dev.to/cscarpitta/creating-a-simple-weather-app-with-python-and-flask-5bpd/ written by initialy  https://dev.to/cscarpitta 
 
