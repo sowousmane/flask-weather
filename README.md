@@ -37,7 +37,7 @@ cd Flask
 
 3. Create a virtual environment
 ```
-python3 -m venv env
+python3 -m venv venv
 ```
 
 4. Activate the virtual environment
@@ -97,7 +97,7 @@ docker-compose up -d
 
 This command will build the Docker image and start the containers in detached mode.
 
-5. Open your web browser and navigate to `http://localhost:5000/forecast?city=Paris` to access the Weather Flask Application running with Docker Compose.
+5. Open your web browser and navigate to `http://localhost:5000` to access the Weather Flask Application running with Docker Compose.
 
 6. To stop and remove the containers, run the following command in the project directory:
 
@@ -116,9 +116,6 @@ To run the Weather Flask Application in Docker, follow these steps:
 docker run --rm -e OPEN_WEATHER_TOKEN=your_token -p 5005:5000 kbosow/flask-weather:0.0.1
 ```
 
-
-## List of endpoints
-- /forecast?city=<CITY_NAME>
   
 ### Credits
 The Weather Flask Application was developed following the tutorial "Creating a Simple Weather App with Python and Flask" by Carlo Scarpitta.

@@ -1,0 +1,20 @@
+name: CI/CD
+
+# Controls when the workflow will run
+on: [push]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set short git commit SHA
+        id: vars
+        run: |
+          short_sha=$(echo "${{ github.sha }}" | cut -c1-7)
+          echo "Short SHA: $short_sha"
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p  ${{ secrets.DOCKERHUB_PASSWORD }}
+          docker build -t kbosow/flask-weather:$short_sha .
+          docker push kbosow/flask-weather:$short_sha
+          docker build -t kbosow/flask-weather:latest .
+          docker push kbosow/flask-weather:latest
