@@ -113,7 +113,7 @@ To run the Weather Flask Application in Docker, follow these steps:
 
 2. Puul and run the image in your computer:
 ```
-docker run --rm -e OPEN_WEATHER_TOKEN=your_token -p 5005:5000 kbosow/flask-weather:0.0.1
+docker run --rm -e OPEN_WEATHER_TOKEN=your_token -p 5005:5000 kbosow/flask-weather:0.1.0
 ```
 
   
