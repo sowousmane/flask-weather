@@ -17,6 +17,6 @@ jobs:
           docker build -t kbosow/flask-weather:latest .
           docker push kbosow/flask-weather:latest
           docker build -t kbosow/flask-weather:0.1.0 .
-          docker push kbosow/flask-weather:0.1.0
+          docker push kbosow/flask-weather:1.0.0
       # docker build -t kbosow/flask-weather:$short_sha .
       # docker push kbosow/flask-weather:$short_sha
