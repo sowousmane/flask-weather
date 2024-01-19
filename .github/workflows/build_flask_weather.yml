@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set short git commit SHA
+      - name: Push image on dockerhub
         id: vars
         run: |
           short_sha=$(echo "${{ github.sha }}" | cut -c1-7)
