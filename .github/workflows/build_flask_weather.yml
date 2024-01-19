@@ -11,10 +11,12 @@ jobs:
       - name: Push image on dockerhub
         id: vars
         run: |
-          short_sha=$(echo "${{ github.sha }}" | cut -c1-7)
-          echo "Short SHA: $short_sha"
+# short_sha=$(echo "${{ github.sha }}" | cut -c1-7)
+#echo "Short SHA: $short_sha"
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p  ${{ secrets.DOCKERHUB_PASSWORD }}
-          docker build -t kbosow/flask-weather:$short_sha .
-          docker push kbosow/flask-weather:$short_sha
           docker build -t kbosow/flask-weather:latest .
           docker push kbosow/flask-weather:latest
+          docker build -t kbosow/flask-weather:0.1.0 .
+          docker push kbosow/flask-weather:0.1.0
+      # docker build -t kbosow/flask-weather:$short_sha .
+      # docker push kbosow/flask-weather:$short_sha
