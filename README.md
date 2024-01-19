@@ -121,5 +121,3 @@ docker run --rm -e OPEN_WEATHER_TOKEN=your_token -p 5005:5000 kbosow/flask-weath
 The Weather Flask Application was developed following the tutorial "Creating a Simple Weather App with Python and Flask" by Carlo Scarpitta.
 ### License
 This project is licensed under the MIT License.
-
-
