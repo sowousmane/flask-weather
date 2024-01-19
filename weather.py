@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 from flask import Flask, render_template, request, abort, Response
@@ -38,12 +39,13 @@ def validate_search():
 @app.route('/',methods=['GET', 'POST'])
 def home():
     result = None
+    current_year = datetime.datetime.now().year
 
     if request.method == 'POST':
         # Handle form submission
         result = validate_search()  # Replace with your actual function
-
-    return render_template('home.html', title="home",result=result)
+    
+    return render_template('home.html', title="home", current_year=current_year ,result=result)
 
 # Get weather using params in url
 @app.route('/forecast', methods=['GET'])

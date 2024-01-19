@@ -37,7 +37,7 @@ cd Flask
 
 3. Create a virtual environment
 ```
-python3 -m venv env
+python3 -m venv venv
 ```
 
 4. Activate the virtual environment

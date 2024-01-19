@@ -1,27 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<header class="p-3 bg-primary text-white">
-    <h1 class="text-center">Weather App</h1>
-</header>
 <div class="px-4  my-3 text-center">
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Welcome to our Weather App! Get accurate and up-to-date weather information
-         at your fingertips. With our app, you can easily check the current temperature, weather conditions, 
-         and forecast for any location around the globe. Stay prepared and plan your day accordingly with our 
-         reliable weather data. Whether you're traveling, planning outdoor activities, or just curious about 
-         the weather, our app has got you covered. Experience a user-friendly interface, beautiful weather icons, 
-         and detailed forecasts. Start exploring the world of weather today with our Weather App!"</p>
-      
+        <p class="lead mb-4">Get quick, accurate weather updates. Plan your day effortlessly with our user-friendly
+            Weather App!</p>
+            <img src="{{ url_for('static', filename='img/sun.jpg') }}" alt="Weather Image" class="img-fluid">
     </div>
-  </div>
-<div class="container mt-5">
-    <form action="{{ url_for("validate_search")}}" method="post">
-        <div class="input-group mb-3">
-            <input type="text" name="city" class="form-control" id="city" placeholder="Enter a city name" required>
-            <button type="submit" class="btn btn-primary">Get Weather</button>
-        </div>
-    </form>
-    
 </div>
 
 {% endblock %}
