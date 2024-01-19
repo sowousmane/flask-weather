@@ -24,9 +24,9 @@ def get_weather(city_name=None):
     url = 'http://api.openweathermap.org/data/2.5/forecast'
     full_url = url + '?' + url_values
     data = urllib.request.urlopen(full_url)
-    print(data)
+    #print(data)
     data=json.loads(data.read().decode('utf8'))
-    print(data)
+    #print(data)
     return data
 
 @app.route("/search-city", methods=["POST"])
