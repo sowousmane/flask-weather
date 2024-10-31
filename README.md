@@ -1,6 +1,7 @@
 # SoWeather Flask Application
 
-SoWeather is a simple Flask web application  Application that provides weather information for a specified location. It is built using Python and Flask framework.
+SoWeather is a simple Flask web application  Application that provides weather information for a specified location. 
+It is built using Python and Flask framework.
 
 The SoWeather Flask Application was created following the tutorial https://dev.to/cscarpitta/creating-a-simple-weather-app-with-python-and-flask-5bpd/ written by initialy  https://dev.to/cscarpitta 
 
